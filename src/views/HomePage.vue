@@ -25,26 +25,10 @@
                 <!-- Page Features-->
                 <div class="row gx-lg-5">
                     <!-- Start Feature -->
-                    <div
+                    <FeatureDivs
                         v-for="feature in features"
-                        class="col-lg-6 col-xxl-4 mb-5"
-                    >
-                        <div class="card bg-light border-0 h-100">
-                            <div class="card-body text-center p-4 p-lg-5">
-                                <div
-                                    class="feature bg-primary bg-gradient text-white rounded-3 mb-4 mt-n4"
-                                >
-                                    <i :class="`bi bi-${feature.icon}`"></i>
-                                </div>
-                                <h2 class="fs-4 fw-bold">
-                                    {{ feature.title }}
-                                </h2>
-                                <p class="mb-0">
-                                    {{ feature.desc }}
-                                </p>
-                            </div>
-                        </div>
-                    </div>
+                        :feature="feature"
+                    />
                     <!-- End Feature -->
                 </div>
             </div>
@@ -53,6 +37,7 @@
 </template>
 
 <script>
+import FeatureDivs from "../components/home/FeatureDivs.vue";
 export default {
     data() {
         return {
@@ -75,16 +60,7 @@ export default {
             ],
         };
     },
+    components: { FeatureDivs },
 };
 </script>
 
-<style scoped>
-.feature {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    height: 4rem;
-    width: 4rem;
-    font-size: 2rem;
-}
-</style>

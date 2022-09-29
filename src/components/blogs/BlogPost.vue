@@ -13,7 +13,9 @@
                 <p class="card-text">
                     {{ post.desc }}
                 </p>
-                <a class="btn btn-primary" href="single.html">Read more →</a>
+                <router-link class="btn btn-primary" to="single"
+                    >Read more →</router-link
+                >
             </div>
         </div>
     </div>
