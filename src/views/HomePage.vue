@@ -24,109 +24,59 @@
             <div class="container px-lg-5">
                 <!-- Page Features-->
                 <div class="row gx-lg-5">
-                    <div class="col-lg-6 col-xxl-4 mb-5">
+                    <!-- Start Feature -->
+                    <div
+                        v-for="feature in features"
+                        class="col-lg-6 col-xxl-4 mb-5"
+                    >
                         <div class="card bg-light border-0 h-100">
                             <div class="card-body text-center p-4 p-lg-5">
                                 <div
                                     class="feature bg-primary bg-gradient text-white rounded-3 mb-4 mt-n4"
                                 >
-                                    <i class="bi bi-collection"></i>
-                                </div>
-                                <h2 class="fs-4 fw-bold">Fresh new layout</h2>
-                                <p class="mb-0">
-                                    With Bootstrap 5, we've created a fresh new
-                                    layout for this template!
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-6 col-xxl-4 mb-5">
-                        <div class="card bg-light border-0 h-100">
-                            <div class="card-body text-center p-4 p-lg-5">
-                                <div
-                                    class="feature bg-primary bg-gradient text-white rounded-3 mb-4 mt-n4"
-                                >
-                                    <i class="bi bi-cloud-download"></i>
-                                </div>
-                                <h2 class="fs-4 fw-bold">Free to download</h2>
-                                <p class="mb-0">
-                                    As always, Start Bootstrap has a powerful
-                                    collectin of free templates.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-6 col-xxl-4 mb-5">
-                        <div class="card bg-light border-0 h-100">
-                            <div class="card-body text-center p-4 p-lg-5">
-                                <div
-                                    class="feature bg-primary bg-gradient text-white rounded-3 mb-4 mt-n4"
-                                >
-                                    <i class="bi bi-card-heading"></i>
+                                    <i :class="`bi bi-${feature.icon}`"></i>
                                 </div>
                                 <h2 class="fs-4 fw-bold">
-                                    Jumbotron hero header
+                                    {{ feature.title }}
                                 </h2>
                                 <p class="mb-0">
-                                    The heroic part of this template is the
-                                    jumbotron hero header!
+                                    {{ feature.desc }}
                                 </p>
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-6 col-xxl-4 mb-5">
-                        <div class="card bg-light border-0 h-100">
-                            <div class="card-body text-center p-4 p-lg-5">
-                                <div
-                                    class="feature bg-primary bg-gradient text-white rounded-3 mb-4 mt-n4"
-                                >
-                                    <i class="bi bi-bootstrap"></i>
-                                </div>
-                                <h2 class="fs-4 fw-bold">Feature boxes</h2>
-                                <p class="mb-0">
-                                    We've created some custom feature boxes
-                                    using Bootstrap icons!
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-6 col-xxl-4 mb-5">
-                        <div class="card bg-light border-0 h-100">
-                            <div class="card-body text-center p-4 p-lg-5">
-                                <div
-                                    class="feature bg-primary bg-gradient text-white rounded-3 mb-4 mt-n4"
-                                >
-                                    <i class="bi bi-code"></i>
-                                </div>
-                                <h2 class="fs-4 fw-bold">Simple clean code</h2>
-                                <p class="mb-0">
-                                    We keep our dependencies up to date and
-                                    squash bugs as they come!
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-6 col-xxl-4 mb-5">
-                        <div class="card bg-light border-0 h-100">
-                            <div class="card-body text-center p-4 p-lg-5">
-                                <div
-                                    class="feature bg-primary bg-gradient text-white rounded-3 mb-4 mt-n4"
-                                >
-                                    <i class="bi bi-patch-check"></i>
-                                </div>
-                                <h2 class="fs-4 fw-bold">A name you trust</h2>
-                                <p class="mb-0">
-                                    Start Bootstrap has been the leader in free
-                                    Bootstrap templates since 2013!
-                                </p>
-                            </div>
-                        </div>
-                    </div>
+                    <!-- End Feature -->
                 </div>
             </div>
         </section>
     </div>
 </template>
+
+<script>
+export default {
+    data() {
+        return {
+            features: [
+                {
+                    icon: "collection",
+                    title: "Fresh new layout",
+                    desc: "With Bootstrap 5, we've created a fresh new layout for this template!",
+                },
+                {
+                    icon: "cloud-download",
+                    title: "Free to download",
+                    desc: "With Bootstrap 5, we've created a fresh new layout for this template!",
+                },
+                {
+                    icon: "card-heading",
+                    title: "Jumbotron hero header",
+                    desc: "With Bootstrap 5, we've created a fresh new layout for this template!",
+                },
+            ],
+        };
+    },
+};
+</script>
 
 <style scoped>
 .feature {
