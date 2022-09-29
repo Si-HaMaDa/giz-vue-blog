@@ -64,5 +64,16 @@ export default {
                 this.post = resText;
             });
     },
+    // async created() {
+    //     let id = this.$route.params.id;
+
+    //     let post = await fetch(
+    //         "https://jsonplaceholder.typicode.com/posts/" + id
+    //     );
+
+    //     post = await post.json();
+
+    //     this.post = post;
+    // },
 };
 </script>

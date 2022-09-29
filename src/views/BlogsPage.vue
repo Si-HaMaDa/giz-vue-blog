@@ -84,5 +84,14 @@ export default {
                 this.posts = resText;
             });
     },
+    // async created() {
+    //     let apiPosts = await fetch(
+    //         "https://jsonplaceholder.typicode.com/posts/"
+    //     );
+
+    //     apiPosts = await response.json();
+
+    //     this.posts = apiPosts;
+    // },
 };
 </script>
