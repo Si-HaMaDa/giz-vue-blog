@@ -8,7 +8,7 @@ import ContactPage from "./views/ContactPage.vue";
 const routes = [
     { path: "/", component: HomePage },
     { path: "/blogs", component: BlogsPage },
-    { path: "/single", component: SinglePage },
+    { path: "/blogs/:id", component: SinglePage },
     { path: "/contact", component: ContactPage },
 ];
 
@@ -17,4 +17,4 @@ const router = createRouter({
     routes, // short for `routes: routes`
 });
 
-export default router
+export default router;

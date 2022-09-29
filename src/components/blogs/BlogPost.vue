@@ -13,9 +13,9 @@
                 <p class="card-text">
                     {{ post.body }}
                 </p>
-                <router-link class="btn btn-primary" to="single"
-                    >Read more →</router-link
-                >
+                <router-link class="btn btn-primary" :to="`blogs/${post.id}`"
+                    >Read more →
+                </router-link>
             </div>
         </div>
     </div>
