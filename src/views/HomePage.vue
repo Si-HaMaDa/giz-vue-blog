@@ -28,6 +28,7 @@
                     <FeatureDivs
                         v-for="feature in features"
                         :feature="feature"
+                        :key="feature.icon"
                     />
                     <!-- End Feature -->
                 </div>
@@ -63,4 +64,3 @@ export default {
     components: { FeatureDivs },
 };
 </script>
-

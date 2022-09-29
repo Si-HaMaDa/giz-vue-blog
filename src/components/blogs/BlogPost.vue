@@ -11,7 +11,7 @@
             <div class="card-body">
                 <h2 class="card-title h4">{{ post.title }}</h2>
                 <p class="card-text">
-                    {{ post.desc }}
+                    {{ post.body }}
                 </p>
                 <router-link class="btn btn-primary" to="single"
                     >Read more →</router-link
