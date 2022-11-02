@@ -89,7 +89,7 @@ export default {
     //         "https://jsonplaceholder.typicode.com/posts/"
     //     );
 
-    //     apiPosts = await response.json();
+    //     apiPosts = await apiPosts.json();
 
     //     this.posts = apiPosts;
     // },
